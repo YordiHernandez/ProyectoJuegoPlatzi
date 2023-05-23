@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8"/>
+            <title>Mokepon</title>
+            <!--<script src="./js/mkp.js"></script>-->
+            <link rel="stylesheet" href="./styles.css"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="first_section">
+        <section id="seleccionar_mascota">
+            <h1 class="titulo">MONSTER HUNTER XD</h1> <!--Class para css, es un selector de clase-->
+            <h2 class="subtitulo">Elige a tu MONSTER</h2>
+            <div class="seccion_mascotas" id="Tarjetas">
+                <!--<input type="radio" name="mascota" id="hipoge"/>
+                <label class="tarjetaPok" for="hipoge" id="lagi">
+                    <p>Lagiacrus</p>
+                    <img src="./assets/75d29aaa55fc85f4749ce7666d18280f-removebg-preview.png" alt="lagi"/>
+                </label>
+                <input type="radio" name="mascota" id="capipepo"/>
+                <label class="tarjetaPok" for="capipepo" id="glav">
+                    <p>Glavenus</p>
+                    <img id="glavenus" src="./assets/glavenusBK.png" alt="glav"/>
+                </label>
+                <input type="radio" name="mascota" id="ratigueya"/>
+                <label class="tarjetaPok" for="ratigueya" id="barroth">
+                    <p>Barroth</p>
+                    <img src="./assets/barroth-removebg.png" alt="Barroth"/>
+                </label> -->
+            </div>
+            <button id="btn_mascota">Seleccionar</button>
+        </section>
+        </section>
+
+        <section id="ver-mapa"> <!-- seccion para el canvas -->
+            <h1 class="titulo">Recorre el mapa con tu MONSTER</h1>
+            <canvas id="mapa"></canvas>
+            <section id="botonesMovimiento">
+            <button  onmouseup="detenerMovimiento()"   onmousedown="moverDerecha()" class="btn_ataque">Mover Derecha</button> <!-- onmouseup sirve para cuando se suelte el click y onmousedown para cuando este presionando click  ambos al boton-->
+            <button  onmouseup="detenerMovimiento()"   onmousedown="moverArriba()" class="btn_ataque">Mover Arriba</button>
+            <button  onmouseup="detenerMovimiento()"   onmousedown="moverAbajo()" class="btn_ataque">Mover Abajo</button>
+            <button  onmouseup="detenerMovimiento()"   onmousedown="moverIzquierda()" class="btn_ataque">Mover Izquierda</button>  <!--Le digo al boton que al dar click haga la funcion "es obligatorio que tenga () si  no no funciona"-->
+            </section>
+        </section>
+
+        <section id="second_section">
+        <section id="seleccionar_ataque">
+            <h1 class="titulo">MONSTER HUNTER XD</h1> <!--Class para css, es un selector de clase-->
+            <h2 class="subtitulo">Selecciona ataque</h2>
+
+            <div class="Elementos" id="Ataques">
+                <!--<button id="btn_fuego" class="btn_ataque">Fuego 🔥</button>
+                <button id="btn_agua" class="btn_ataque">Agua 💧</button>
+                <button id="btn_tierra" class="btn_ataque">Tierra 🌱</button> -->
+            </div>
+
+            <div class="combate">
+                <section id="mensajes"> 
+                    <p id="Resultado">JUGAMELA Xd</p>  
+                    <button id="btn_reiniciar" class="btn_ataque">Reiniciar</button>                   
+                </section> 
+            </div>
+
+            <div class="vidas">
+                <div id="AJ">
+                    <p><span id="text_mascota"></span> </p> <!--Se pone un id al span para identificar-->
+                    <p><span id="vidaJugador">0</span> Victorias</p>
+                    <div id="ataqueJ"></div>                   
+                </div>
+                <div id="AE">
+                    <p><span id="text_mascotaE"></span></p>
+                    <p><span id="vidaEnemigo">0</span> Victorias</p>
+                    <div id="ataqueE"></div>
+                </div>
+            </div>
+        </section>
+        </section>
+        <script src="./js/mkp.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+</html>
